@@ -33,3 +33,12 @@ bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToF
     return false;
     
 }
+
+
+
+void PrintNames(std::vector<std::string> & names) {
+    
+    for(int i=0; i < names.size(); i++)
+    std::cout << names.at(i) << ' ';
+    
+}
