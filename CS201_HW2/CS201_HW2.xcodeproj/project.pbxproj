@@ -12,6 +12,8 @@
 		F85014A3251931BA009D9890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A2251931BA009D9890 /* main.cpp */; };
 		F85014A9251932F9009D9890 /* money.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A7251932F9009D9890 /* money.cpp */; };
 		F85014AA25193761009D9890 /* money.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A7251932F9009D9890 /* money.cpp */; };
+		F85014B8251938D8009D9890 /* rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014B6251938D8009D9890 /* rice.cpp */; };
+		F85014BA25193999009D9890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014B925193999009D9890 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		F85014AD251938B8009D9890 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +55,10 @@
 		F85014A2251931BA009D9890 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F85014A7251932F9009D9890 /* money.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = money.cpp; sourceTree = "<group>"; };
 		F85014A8251932F9009D9890 /* money.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = money.hpp; sourceTree = "<group>"; };
+		F85014AF251938B8009D9890 /* RiceProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RiceProgram; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85014B6251938D8009D9890 /* rice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rice.cpp; sourceTree = "<group>"; };
+		F85014B7251938D8009D9890 /* rice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rice.hpp; sourceTree = "<group>"; };
+		F85014B925193999009D9890 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +70,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F850149D251931BA009D9890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85014AC251938B8009D9890 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,6 +99,7 @@
 			children = (
 				F83369AD251862240013C5F1 /* NamesProgram */,
 				F85014A0251931BA009D9890 /* MoneyProgram */,
+				F85014AF251938B8009D9890 /* RiceProgram */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +107,7 @@
 		F83369AF251862240013C5F1 /* CS201_HW2 */ = {
 			isa = PBXGroup;
 			children = (
+				F85014B0251938B8009D9890 /* RiceProgram */,
 				F85014A1251931BA009D9890 /* MoneyProgram */,
 				F850149B25193170009D9890 /* NamesProgram */,
 			);
@@ -108,6 +132,16 @@
 				F85014A8251932F9009D9890 /* money.hpp */,
 			);
 			path = MoneyProgram;
+			sourceTree = "<group>";
+		};
+		F85014B0251938B8009D9890 /* RiceProgram */ = {
+			isa = PBXGroup;
+			children = (
+				F85014B6251938D8009D9890 /* rice.cpp */,
+				F85014B7251938D8009D9890 /* rice.hpp */,
+				F85014B925193999009D9890 /* main.cpp */,
+			);
+			path = RiceProgram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +181,23 @@
 			productReference = F85014A0251931BA009D9890 /* MoneyProgram */;
 			productType = "com.apple.product-type.tool";
 		};
+		F85014AE251938B8009D9890 /* RiceProgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85014B3251938B8009D9890 /* Build configuration list for PBXNativeTarget "RiceProgram" */;
+			buildPhases = (
+				F85014AB251938B8009D9890 /* Sources */,
+				F85014AC251938B8009D9890 /* Frameworks */,
+				F85014AD251938B8009D9890 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RiceProgram;
+			productName = RiceProgram;
+			productReference = F85014AF251938B8009D9890 /* RiceProgram */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +211,9 @@
 						CreatedOnToolsVersion = 11.5;
 					};
 					F850149F251931BA009D9890 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F85014AE251938B8009D9890 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -179,6 +233,7 @@
 			targets = (
 				F83369AC251862230013C5F1 /* NamesProgram */,
 				F850149F251931BA009D9890 /* MoneyProgram */,
+				F85014AE251938B8009D9890 /* RiceProgram */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +255,15 @@
 			files = (
 				F85014AA25193761009D9890 /* money.cpp in Sources */,
 				F85014A3251931BA009D9890 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85014AB251938B8009D9890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85014BA25193999009D9890 /* main.cpp in Sources */,
+				F85014B8251938D8009D9890 /* rice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +411,22 @@
 			};
 			name = Release;
 		};
+		F85014B4251938B8009D9890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F85014B5251938B8009D9890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,6 +453,15 @@
 			buildConfigurations = (
 				F85014A5251931BA009D9890 /* Debug */,
 				F85014A6251931BA009D9890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85014B3251938B8009D9890 /* Build configuration list for PBXNativeTarget "RiceProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85014B4251938B8009D9890 /* Debug */,
+				F85014B5251938B8009D9890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

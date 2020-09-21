@@ -30,6 +30,7 @@ int main(int argc, const char * argv[]) {
     
     float total = CalculateTotal(pennies, nickels, dimes, quarters);
     cout << "The total is $" << total;
+    std::cout << std::endl;
     
     return 0;
 }
