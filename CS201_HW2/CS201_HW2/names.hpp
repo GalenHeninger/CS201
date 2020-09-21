@@ -20,6 +20,7 @@
 void InputNames(std::vector<std::string> & names);
 bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToFind);
 void PrintNames(std::vector<std::string> & names);
+void SortNames(std::vector<std::string> & names);
 
 #include <stdio.h>
 

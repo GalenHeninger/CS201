@@ -16,14 +16,20 @@ int main(int argc, const char * argv[]) {
     // Confirming input
     std::cout << "The names vector contains: ";
     PrintNames(names);
-    
+    std::cout << std::endl;
     
     //Testing DoesNameExist
     if(DoesNameExist(names, "A")) {
-        std::cout << "\n The name A is on the list.";
+        std::cout << "\nThe name A is on the list." << std::endl;
     } else {
-        std::cout << "\n The name A is not on the list.";
+        std::cout << "\nThe name A is not on the list." << std::endl;
     }
     
+    SortNames(names);
+    
+    // Confirming that the sort function works
+    std::cout << "\nThe sorted names are: ";
+    PrintNames(names);
+    std::cout << std::endl;
     
 }

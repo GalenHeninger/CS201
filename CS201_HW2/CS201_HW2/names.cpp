@@ -34,11 +34,15 @@ bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToF
     
 }
 
-
-
 void PrintNames(std::vector<std::string> & names) {
     
     for(int i=0; i < names.size(); i++)
     std::cout << names.at(i) << ' ';
+    
+}
+
+void SortNames(std::vector<std::string> & names) {
+    
+    std::sort(names.begin(), names.end());
     
 }
