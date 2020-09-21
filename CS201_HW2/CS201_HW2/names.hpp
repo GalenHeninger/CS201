@@ -18,6 +18,7 @@
 #include <algorithm>
 
 void InputNames(std::vector<std::string> & names);
+bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToFind);
 
 #include <stdio.h>
 

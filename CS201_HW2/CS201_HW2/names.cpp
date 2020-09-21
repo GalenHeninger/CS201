@@ -23,10 +23,13 @@ void InputNames(std::vector<std::string> & names) {
 }
 
 bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToFind) {
-    // Will loop though names vector
-    bool NameExists = false;
     
+    for (int i = 0; i < names.size(); i++) {
+        
+        if (names.at(i) == NameToFind)
+            return true;
+    }
     
-    return NameExists;
+    return false;
     
 }

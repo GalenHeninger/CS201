@@ -19,4 +19,13 @@ int main(int argc, const char * argv[]) {
     for(int i=0; i < names.size(); i++)
     std::cout << names.at(i) << ' ';
     
+    
+    //Testing DoesNameExist
+    if(DoesNameExist(names, "A")) {
+        std::cout << "\n The name A is on the list.";
+    } else {
+        std::cout << "\n The name A is not on the list.";
+    }
+    
+    
 }
