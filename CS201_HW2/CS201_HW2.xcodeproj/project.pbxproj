@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F83369B1251862240013C5F1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83369B0251862240013C5F1 /* main.cpp */; };
 		F83369B9251863F50013C5F1 /* names.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F83369B7251863F50013C5F1 /* names.cpp */; };
+		F85014A3251931BA009D9890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A2251931BA009D9890 /* main.cpp */; };
+		F85014A9251932F9009D9890 /* money.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A7251932F9009D9890 /* money.cpp */; };
+		F85014AA25193761009D9890 /* money.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A7251932F9009D9890 /* money.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,17 +24,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		F850149E251931BA009D9890 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F83369AD251862240013C5F1 /* CS201_HW2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CS201_HW2; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83369AD251862240013C5F1 /* NamesProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NamesProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83369B0251862240013C5F1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F83369B7251863F50013C5F1 /* names.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = names.cpp; sourceTree = "<group>"; };
 		F83369B8251863F50013C5F1 /* names.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = names.hpp; sourceTree = "<group>"; };
+		F85014A0251931BA009D9890 /* MoneyProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MoneyProgram; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85014A2251931BA009D9890 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F85014A7251932F9009D9890 /* money.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = money.cpp; sourceTree = "<group>"; };
+		F85014A8251932F9009D9890 /* money.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = money.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F83369AA251862230013C5F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F850149D251931BA009D9890 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,7 +75,8 @@
 		F83369AE251862240013C5F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F83369AD251862240013C5F1 /* CS201_HW2 */,
+				F83369AD251862240013C5F1 /* NamesProgram */,
+				F85014A0251931BA009D9890 /* MoneyProgram */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,19 +84,38 @@
 		F83369AF251862240013C5F1 /* CS201_HW2 */ = {
 			isa = PBXGroup;
 			children = (
+				F85014A1251931BA009D9890 /* MoneyProgram */,
+				F850149B25193170009D9890 /* NamesProgram */,
+			);
+			path = CS201_HW2;
+			sourceTree = "<group>";
+		};
+		F850149B25193170009D9890 /* NamesProgram */ = {
+			isa = PBXGroup;
+			children = (
 				F83369B0251862240013C5F1 /* main.cpp */,
 				F83369B7251863F50013C5F1 /* names.cpp */,
 				F83369B8251863F50013C5F1 /* names.hpp */,
 			);
-			path = CS201_HW2;
+			path = NamesProgram;
+			sourceTree = "<group>";
+		};
+		F85014A1251931BA009D9890 /* MoneyProgram */ = {
+			isa = PBXGroup;
+			children = (
+				F85014A2251931BA009D9890 /* main.cpp */,
+				F85014A7251932F9009D9890 /* money.cpp */,
+				F85014A8251932F9009D9890 /* money.hpp */,
+			);
+			path = MoneyProgram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F83369AC251862230013C5F1 /* CS201_HW2 */ = {
+		F83369AC251862230013C5F1 /* NamesProgram */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F83369B4251862240013C5F1 /* Build configuration list for PBXNativeTarget "CS201_HW2" */;
+			buildConfigurationList = F83369B4251862240013C5F1 /* Build configuration list for PBXNativeTarget "NamesProgram" */;
 			buildPhases = (
 				F83369A9251862230013C5F1 /* Sources */,
 				F83369AA251862230013C5F1 /* Frameworks */,
@@ -82,9 +125,26 @@
 			);
 			dependencies = (
 			);
-			name = CS201_HW2;
+			name = NamesProgram;
 			productName = CS201_HW2;
-			productReference = F83369AD251862240013C5F1 /* CS201_HW2 */;
+			productReference = F83369AD251862240013C5F1 /* NamesProgram */;
+			productType = "com.apple.product-type.tool";
+		};
+		F850149F251931BA009D9890 /* MoneyProgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85014A4251931BA009D9890 /* Build configuration list for PBXNativeTarget "MoneyProgram" */;
+			buildPhases = (
+				F850149C251931BA009D9890 /* Sources */,
+				F850149D251931BA009D9890 /* Frameworks */,
+				F850149E251931BA009D9890 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoneyProgram;
+			productName = MoneyProgram;
+			productReference = F85014A0251931BA009D9890 /* MoneyProgram */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,6 +157,9 @@
 				ORGANIZATIONNAME = Galen;
 				TargetAttributes = {
 					F83369AC251862230013C5F1 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F850149F251931BA009D9890 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -114,7 +177,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F83369AC251862230013C5F1 /* CS201_HW2 */,
+				F83369AC251862230013C5F1 /* NamesProgram */,
+				F850149F251931BA009D9890 /* MoneyProgram */,
 			);
 		};
 /* End PBXProject section */
@@ -126,6 +190,16 @@
 			files = (
 				F83369B9251863F50013C5F1 /* names.cpp in Sources */,
 				F83369B1251862240013C5F1 /* main.cpp in Sources */,
+				F85014A9251932F9009D9890 /* money.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F850149C251931BA009D9890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85014AA25193761009D9890 /* money.cpp in Sources */,
+				F85014A3251931BA009D9890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +331,22 @@
 			};
 			name = Release;
 		};
+		F85014A5251931BA009D9890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F85014A6251931BA009D9890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -269,11 +359,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F83369B4251862240013C5F1 /* Build configuration list for PBXNativeTarget "CS201_HW2" */ = {
+		F83369B4251862240013C5F1 /* Build configuration list for PBXNativeTarget "NamesProgram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F83369B5251862240013C5F1 /* Debug */,
 				F83369B6251862240013C5F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85014A4251931BA009D9890 /* Build configuration list for PBXNativeTarget "MoneyProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85014A5251931BA009D9890 /* Debug */,
+				F85014A6251931BA009D9890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

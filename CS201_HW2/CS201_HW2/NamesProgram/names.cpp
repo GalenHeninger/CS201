@@ -24,11 +24,9 @@ void InputNames(std::vector<std::string> & names) {
 
 bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToFind) {
     
-    for (int i = 0; i < names.size(); i++) {
-        
-        if (names.at(i) == NameToFind)
+    for(auto name : names)
+        if (name == NameToFind)
             return true;
-    }
     
     return false;
     
@@ -36,8 +34,8 @@ bool DoesNameExist(std::vector<std::string> & names, const std::string & NameToF
 
 void PrintNames(std::vector<std::string> & names) {
     
-    for(int i=0; i < names.size(); i++)
-    std::cout << names.at(i) << ' ';
+    for(auto name : names)
+        std::cout << name << ' ';
     
 }
 
