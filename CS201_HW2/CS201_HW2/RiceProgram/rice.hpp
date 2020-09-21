@@ -10,6 +10,7 @@
 #define rice_hpp
 
 #include <stdio.h>
+#include <math.h>
 
 int NumberOfSquaresRequired(int GrainNumber);
 
