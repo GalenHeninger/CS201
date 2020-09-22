@@ -9,6 +9,7 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
+    
     using std::cin;
     using std::cout;
     
@@ -32,7 +33,7 @@ int main(int argc, const char * argv[]) {
             else{
                 cout << " ";
             }
-            
+            cout << " ";
         }
             
         cout << "\n";
