@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				F83369AF251862240013C5F1 /* CS201_HW2 */,
-				F85014C02519700E009D9890 /* TurnsProgram */,
 				F83369AE251862240013C5F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +133,7 @@
 		F83369AF251862240013C5F1 /* CS201_HW2 */ = {
 			isa = PBXGroup;
 			children = (
+				F85014C02519700E009D9890 /* TurnsProgram */,
 				F85014B0251938B8009D9890 /* RiceProgram */,
 				F85014A1251931BA009D9890 /* MoneyProgram */,
 				F850149B25193170009D9890 /* NamesProgram */,

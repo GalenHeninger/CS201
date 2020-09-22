@@ -9,7 +9,17 @@
 #ifndef grid_hpp
 #define grid_hpp
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using std::vector;
+
+
 #include <stdio.h>
+
+inline vector<vector<char>> grid;
+
 void GridInit(int numColumns, int numRows);
 void GridPrint();
 void GridClear();
