@@ -14,6 +14,9 @@
 		F85014AA25193761009D9890 /* money.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014A7251932F9009D9890 /* money.cpp */; };
 		F85014B8251938D8009D9890 /* rice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014B6251938D8009D9890 /* rice.cpp */; };
 		F85014BA25193999009D9890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014B925193999009D9890 /* main.cpp */; };
+		F85014C22519700E009D9890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014C12519700E009D9890 /* main.cpp */; };
+		F85014C825197026009D9890 /* turns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014C625197026009D9890 /* turns.cpp */; };
+		F85014CB251970AB009D9890 /* grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F85014C9251970AB009D9890 /* grid.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +47,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		F85014BD2519700E009D9890 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +71,12 @@
 		F85014B6251938D8009D9890 /* rice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rice.cpp; sourceTree = "<group>"; };
 		F85014B7251938D8009D9890 /* rice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rice.hpp; sourceTree = "<group>"; };
 		F85014B925193999009D9890 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F85014BF2519700E009D9890 /* TurnsProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TurnsProgram; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85014C12519700E009D9890 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F85014C625197026009D9890 /* turns.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = turns.cpp; sourceTree = "<group>"; };
+		F85014C725197026009D9890 /* turns.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = turns.hpp; sourceTree = "<group>"; };
+		F85014C9251970AB009D9890 /* grid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = grid.cpp; sourceTree = "<group>"; };
+		F85014CA251970AB009D9890 /* grid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = grid.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F85014BC2519700E009D9890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				F83369AF251862240013C5F1 /* CS201_HW2 */,
+				F85014C02519700E009D9890 /* TurnsProgram */,
 				F83369AE251862240013C5F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +126,7 @@
 				F83369AD251862240013C5F1 /* NamesProgram */,
 				F85014A0251931BA009D9890 /* MoneyProgram */,
 				F85014AF251938B8009D9890 /* RiceProgram */,
+				F85014BF2519700E009D9890 /* TurnsProgram */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +169,18 @@
 				F85014B925193999009D9890 /* main.cpp */,
 			);
 			path = RiceProgram;
+			sourceTree = "<group>";
+		};
+		F85014C02519700E009D9890 /* TurnsProgram */ = {
+			isa = PBXGroup;
+			children = (
+				F85014C12519700E009D9890 /* main.cpp */,
+				F85014C625197026009D9890 /* turns.cpp */,
+				F85014C725197026009D9890 /* turns.hpp */,
+				F85014C9251970AB009D9890 /* grid.cpp */,
+				F85014CA251970AB009D9890 /* grid.hpp */,
+			);
+			path = TurnsProgram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +237,23 @@
 			productReference = F85014AF251938B8009D9890 /* RiceProgram */;
 			productType = "com.apple.product-type.tool";
 		};
+		F85014BE2519700E009D9890 /* TurnsProgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85014C32519700E009D9890 /* Build configuration list for PBXNativeTarget "TurnsProgram" */;
+			buildPhases = (
+				F85014BB2519700E009D9890 /* Sources */,
+				F85014BC2519700E009D9890 /* Frameworks */,
+				F85014BD2519700E009D9890 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TurnsProgram;
+			productName = turns;
+			productReference = F85014BF2519700E009D9890 /* TurnsProgram */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,6 +270,9 @@
 						CreatedOnToolsVersion = 11.5;
 					};
 					F85014AE251938B8009D9890 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F85014BE2519700E009D9890 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -234,6 +293,7 @@
 				F83369AC251862230013C5F1 /* NamesProgram */,
 				F850149F251931BA009D9890 /* MoneyProgram */,
 				F85014AE251938B8009D9890 /* RiceProgram */,
+				F85014BE2519700E009D9890 /* TurnsProgram */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +324,16 @@
 			files = (
 				F85014BA25193999009D9890 /* main.cpp in Sources */,
 				F85014B8251938D8009D9890 /* rice.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85014BB2519700E009D9890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85014C825197026009D9890 /* turns.cpp in Sources */,
+				F85014C22519700E009D9890 /* main.cpp in Sources */,
+				F85014CB251970AB009D9890 /* grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +497,22 @@
 			};
 			name = Release;
 		};
+		F85014C42519700E009D9890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F85014C52519700E009D9890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -462,6 +548,15 @@
 			buildConfigurations = (
 				F85014B4251938B8009D9890 /* Debug */,
 				F85014B5251938B8009D9890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85014C32519700E009D9890 /* Build configuration list for PBXNativeTarget "TurnsProgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F85014C42519700E009D9890 /* Debug */,
+				F85014C52519700E009D9890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
