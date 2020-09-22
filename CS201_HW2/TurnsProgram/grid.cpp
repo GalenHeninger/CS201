@@ -9,7 +9,9 @@
 #include <iostream>
 #include <vector>
 #include "grid.hpp"
+
 using std::vector;
+using std::cout;
 
 vector<vector<char>> grid;
 unsigned numColumns;
@@ -19,5 +21,14 @@ void GridInit(int numColumns, int numRows) {
     
     vector<char> init_column(numRows);
     vector<vector<char>> grid(numColumns, init_column);
+    
+}
+
+void GridPrint() {
+    
+    for (auto grid_column : grid)
+        for (auto element : grid_column)
+            cout << element;
+    cout <<"\n";
     
 }
