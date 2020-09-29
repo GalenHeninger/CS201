@@ -10,12 +10,28 @@
 #include <iostream>
 
 using std::cout;
+using std::cin;
 
 int main(int argc, const char * argv[]) {
     
-    std::string string_in = "Test";
+    std::string string_in;
+    int width;
     
-    print_asterisk(string_in, 1);
+    while (string_in != "end") {
+        
+        cout << "Enter a string or type 'end' to exit.\n";
+        cin >> string_in;
+        
+        if (string_in == "end")
+            break;
+            
+        cout << "Enter the border width as a positive integer.\n";
+        cin >> width;
+                
+        print_asterisk(string_in, width);
+            
+        
+    }
     
     return 0;
 }
