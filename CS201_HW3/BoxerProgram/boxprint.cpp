@@ -43,3 +43,24 @@ void print_line_with_spaces(int string_length, int border_width) {
     
     return;
 }
+
+void print_asterisk(std::string string_in, int border_width) {
+    
+    int string_length = string_in.size();
+    
+    print_upper_lower_border_lines(string_length, border_width);
+    print_line_with_spaces(string_length, border_width);
+    
+    
+    
+    print_left_right_border_characters(border_width);
+    std::cout << " " << string_in << " ";
+    print_left_right_border_characters(border_width);
+    std::cout << "\n";
+    
+    print_line_with_spaces(string_length, border_width);
+    print_upper_lower_border_lines(string_length, border_width);
+    
+    return;
+}
+

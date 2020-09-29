@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 
-
+// Prints a string of text inside a box of * characters
+void print_asterisk(std::string string_in, int border_width);
 
 #endif /* boxer_hpp */

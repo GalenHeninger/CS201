@@ -13,7 +13,9 @@ using std::cout;
 
 int main(int argc, const char * argv[]) {
     
+    std::string string_in = "Test";
     
+    print_asterisk(string_in, 1);
     
     return 0;
 }
