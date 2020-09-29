@@ -29,3 +29,17 @@ void print_left_right_border_characters(int border_width) {
     
     return;
 }
+
+void print_line_with_spaces(int string_length, int border_width) {
+    
+    print_left_right_border_characters(border_width);
+    
+    for (int i = 0; i < string_length + 2; i++)
+        std::cout << " ";
+    
+    print_left_right_border_characters(border_width);
+    
+    std::cout << "\n";
+    
+    return;
+}
