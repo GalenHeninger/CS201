@@ -22,3 +22,10 @@ void print_upper_lower_border_lines(int string_length, int border_width) {
     return;
 }
 
+void print_left_right_border_characters(int border_width) {
+    
+    for (int i = 0; i < border_width; i++)
+        std::cout << "*";
+    
+    return;
+}
