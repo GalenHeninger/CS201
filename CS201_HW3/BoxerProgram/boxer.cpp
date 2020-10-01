@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
     std::string string_in;
     int width;
     
-    while (string_in != "end") {
+    while (true) {
         
         cout << "Enter a string or type 'end' to exit.\n";
         cin >> string_in;
@@ -32,6 +32,8 @@ int main(int argc, const char * argv[]) {
             
         
     }
+    
+    cout << std::endl;
     
     return 0;
 }
