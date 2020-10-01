@@ -10,6 +10,11 @@
 
 float quadratic(float a, float b, float c) {
     
+    float d = b*b - 4*a*c;
+    int num_roots = int(d >= 0.0) + int(d > 0.0);
+    
+    float x1, x2;
+    
     
     
     return x1, x2;
