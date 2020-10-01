@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 
 std::pair<float, float> quadratic(float a, float b, float c) {
     
@@ -21,10 +22,12 @@ std::pair<float, float> quadratic(float a, float b, float c) {
             x1 = x2 = NULL;
             break;
         case 1:
+            
             x1 = x2 = -0.5*b/a;
             break;
         
         case 2:
+            d = sqrt(d);
             x1 = 0.5*(-b - d)/a;
             x2 = 0.5*(-b + d)/a;
             break;
@@ -38,7 +41,8 @@ int main(int argc, const char * argv[]) {
     
     std::pair<float, float> solutions = quadratic(1.0, -2.0, -1.0);
     
-    
+    std::cout << solutions.first;
+    std::cout << solutions.second << std::endl;
     
     return 0;
 }
