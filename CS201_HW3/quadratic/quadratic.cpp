@@ -12,6 +12,8 @@
 std::pair<float, float> quadratic(float a, float b, float c) {
     
     float d = b*b - 4*a*c;
+    
+    // This check should absolutely work, but it is incorrect when d = 0
     int num_roots = int(d >= 0.0) + int(d > 0.0);
     
     float x1, x2;
@@ -39,10 +41,27 @@ std::pair<float, float> quadratic(float a, float b, float c) {
 
 int main(int argc, const char * argv[]) {
     
-    std::pair<float, float> solutions = quadratic(1.0, -2.0, -1.0);
+    float a, b, c;
     
-    std::cout << solutions.first;
-    std::cout << solutions.second << std::endl;
+    std::cout << "Enter a value for a.\n";
+    std::cin >> a;
+    
+    std::cout << "Enter a value for b.\n";
+    std::cin >> b;
+    
+    std::cout << "Enter a value for c.\n";
+    std::cin >> c;
+    
+    std::pair<float, float> solutions = quadratic(a, b, c);
+    
+    if(solutions.first == NULL)
+        std::cout << "There are no real solutions.";
+    else {
+        std::cout << "x1 = " << solutions.first << "\n";
+        std::cout << "x2 = " << solutions.second << "\n";
+    }
+    
+    std::cout << std::endl;
     
     return 0;
 }
