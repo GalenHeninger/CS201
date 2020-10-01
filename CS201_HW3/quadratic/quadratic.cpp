@@ -13,7 +13,7 @@ std::pair<float, float> quadratic(float a, float b, float c) {
     
     float d = b*b - 4*a*c;
     
-    // This check should absolutely work, but it is incorrect when d = 0
+    // This check should absolutely work, but it appears incorrect when d = 0
     int num_roots = int(d >= 0.0) + int(d > 0.0);
     
     float x1, x2;
@@ -23,8 +23,8 @@ std::pair<float, float> quadratic(float a, float b, float c) {
             // No roots
             x1 = x2 = NULL;
             break;
-        case 1:
             
+        case 1:
             x1 = x2 = -0.5*b/a;
             break;
         
