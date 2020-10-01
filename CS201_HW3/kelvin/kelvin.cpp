@@ -19,16 +19,29 @@
 
 
 double celsius_to_kelvin(double c) {
-    int k = c + 273.15;
+    
+    int k;
+    
+    if(c < 273.15) {
+        std::cout << "A celsius temperature below -273.15 degrees is unphysical.\n";
+        k = -1;
+    } else {
+        k = c + 273.15;
+    }
+    
     return k;
 }
 
 int main(int argc, const char * argv[]) {
     
+    std::cout << "Enter a celsius temperature.\n";
+    
     double c = 0;
     std::cin >> c;
     double k = celsius_to_kelvin(c);
-    std::cout << k << "\n";
+    
+    if (k >= 0.0)
+        std::cout << k << "\n";
     
     return 0;
 }
