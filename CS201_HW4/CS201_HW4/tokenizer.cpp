@@ -16,9 +16,7 @@ bool ReadLine(std::string& str) {
 
 unsigned StringToTokensWS(const std::string &input, std::vector<std::string> &tokens) {
     
-    std::string line;
-    std::getline(std::cin, line);
-    std::istringstream iss(line);
+    std::istringstream iss(input);
     
     std::string token_string;
     
@@ -27,6 +25,8 @@ unsigned StringToTokensWS(const std::string &input, std::vector<std::string> &to
         tokens.push_back(token_string);
     }
     
+    tokens.push_back("");
+    
     return tokens.size();
 }
 
@@ -34,7 +34,8 @@ void AnalyzeTokens(const std::vector<std::string> &tokens) {
     
     for(auto token:tokens) {
         
-        std::cout << "<" << token << "> Type: " << typeid(token).name();
+        std::cout << "<" << token << "> Type: ";// << typeid(token).name();
+        std::cout << std::endl;
 
     }
     
