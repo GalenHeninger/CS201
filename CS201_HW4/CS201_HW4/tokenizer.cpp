@@ -29,3 +29,13 @@ unsigned StringToTokensWS(const std::string &input, std::vector<std::string> &to
     
     return tokens.size();
 }
+
+void AnalyzeTokens(const std::vector<std::string> &tokens) {
+    
+    for(auto token:tokens) {
+        
+        std::cout << "<" << token << "> Type: " << typeid(token).name();
+
+    }
+    
+}
