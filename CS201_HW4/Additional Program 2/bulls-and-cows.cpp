@@ -58,17 +58,17 @@ int total_number_correct(vector<int> v, vector<int> guess) {
     return n;
 }
 
-//int number_correct_with_right_placement(vector<int> v, vector<int> guess) {
-//
-//    int n = 0;
-//
-//    for(int i = 0; i < v.size(); i++) {
-//        if(v.at(i) == guess.at(i))
-//            n++;
-//    }
-//
-//    return n;
-//}
+int number_correct_with_right_placement(vector<int> v, vector<int> guess) {
+
+    int n = 0;
+
+    for(int i = 0; i < v.size(); i++) {
+        if(v.at(i) == guess.at(i))
+            n++;
+    }
+
+    return n;
+}
 
 int main(int argc, const char * argv[]) {
     
@@ -86,8 +86,8 @@ int main(int argc, const char * argv[]) {
         guess_input(guess);
         print_numbers(v);
         
-//        int a = number_correct_with_wrong_placement(v, guess);
-//        int b = number_correct_with_right_placement(v, guess);
+        int a = number_correct_with_wrong_placement(v, guess);
+        int b = number_correct_with_right_placement(v, guess);
         
         cout << "There are " << a << " correct numbers with the wrong placement.\n";
         cout << "There are " << b << " correct numbers with the right placement.\n";
