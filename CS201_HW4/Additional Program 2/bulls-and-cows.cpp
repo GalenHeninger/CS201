@@ -32,7 +32,7 @@ void initialize_different_random_integers(vector<int> &v) {
     }
 }
 
-void guess_input(vector<int> guess) {
+void guess_input(vector<int> &guess) {
     int n = 0;
     int i = 0;
     while(n >= 0 && i < 4) {
@@ -46,17 +46,28 @@ void guess_input(vector<int> guess) {
     
 }
 
-//void find_number_or_smth(vector<int> &v) {
+int total_number_correct(vector<int> v, vector<int> guess) {
+    
+    int n = 0;
+    
+    for(int i = 0; i < v.size(); i++) {
+        if(count(v.begin(), v.end(), guess.at(i)))
+            n++;
+    }
+    
+    return n;
+}
+
+//int number_correct_with_right_placement(vector<int> v, vector<int> guess) {
 //
-//    vector<int>::iterator it;
-//    it = find (v.begin(), v.end(), 30);
+//    int n = 0;
 //
+//    for(int i = 0; i < v.size(); i++) {
+//        if(v.at(i) == guess.at(i))
+//            n++;
+//    }
 //
-//    if (it != v.end())
-//        std::cout << "Element found in v: " << *it << '\n';
-//    else
-//        std::cout << "Element not found in v\n";
-//
+//    return n;
 //}
 
 int main(int argc, const char * argv[]) {
@@ -64,25 +75,31 @@ int main(int argc, const char * argv[]) {
     vector<int> v(4);
     vector<int> guess(4);
     
-    //cout << "There are four different digits ranged from 0 to 10.\n";
+    cout << "There are four different digits ranged from 0 to 10.\n";
     
     do {
         
+        
         initialize_different_random_integers(v);
         print_numbers(v);
+        
+        guess_input(guess);
+        print_numbers(v);
+        
+//        int a = number_correct_with_wrong_placement(v, guess);
+//        int b = number_correct_with_right_placement(v, guess);
+        
+        cout << "There are " << a << " correct numbers with the wrong placement.\n";
+        cout << "There are " << b << " correct numbers with the right placement.\n";
         
         cout << endl;
         
     } while (v != guess);
     
     if(v == guess) {
-        cout << "Correct.\n"
+        cout << "Correct.\n";
     }
     cout << endl;
-}
-
-    
-    
     
     
     
