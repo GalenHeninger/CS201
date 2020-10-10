@@ -32,10 +32,15 @@ void initialize_different_random_integers(vector<int> &v) {
     }
 }
 
-void guess_input(vector<int> &guess) {
+bool guess_input(vector<int> &guess) {
+    
+    cout << "Type a negative integer to exit.\n";
+    
     int n = 0;
     int i = 0;
+    
     while(n >= 0 && i < 4) {
+        
         cout << "Enter a guess for integer " << i + 1 << ": ";
         cin >> n;
         
@@ -43,6 +48,8 @@ void guess_input(vector<int> &guess) {
         
         i++;
     }
+    
+    return n >= 0;
     
 }
 
@@ -81,24 +88,28 @@ int main() {
     cout << "There are four different digits ranged from 0 to 9.\n";
     
     initialize_different_random_integers(v);
-    print_numbers(v);
     cout << endl;
     
     do {
         
-        
-        guess_input(guess);
-        print_numbers(guess);
-        cout << endl;
-        
-        int a = total_number_correct(v, guess);
-        int b = number_correct_with_right_placement(v, guess);
-        
-        if(v != guess) {
-            cout << "There are " << a - b << " correct numbers with the wrong placement.\n";
-            cout << "There are " << b << " correct numbers with the right placement.\n";
+        if(guess_input(guess)) {
             
+            print_numbers(guess);
             cout << endl;
+            
+            int a = total_number_correct(v, guess);
+            int b = number_correct_with_right_placement(v, guess);
+            
+            if(v != guess) {
+                cout << "There are " << a - b << " correct numbers with the wrong placement.\n";
+                cout << "There are " << b << " correct numbers with the right placement.\n";
+                cout << endl;
+            }
+        } else {
+            
+            cout << "The sequence was ";
+            print_numbers(v);
+            break;
         }
         
     } while (v != guess);
