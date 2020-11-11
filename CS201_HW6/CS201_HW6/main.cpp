@@ -13,6 +13,7 @@
 #include <random>
 #include <cmath>
 
+using std::cout;
 using std::mt19937;
 
 std::random_device device;
@@ -41,7 +42,7 @@ int RandomBetween(int first, int last) {
 void PrintDistribution(const std::map<int, int> &numbers) {
     for (auto p : numbers) {
         std::cout << std::fixed << std::setprecision(1) << std::setw(2)
-                  << p.first << ' ' << std::string(p.second/200, '*') << '\n';
+                  << p.first << ' ' << std::string(p.second/100, '*') << '\n';
     }
 }
  
@@ -50,12 +51,36 @@ int main()
     srand(0);
  
     std::map<int, int> hist;
+    
+    for (int n = 0; n < 10000; ++n) {
+        ++hist[RandomBetween(-5, 5)];
+    }
+    
+    cout << "rand() uniform distribution:\n";
+    PrintDistribution(hist);
+    
+    hist.clear();
+    
+    for (int n = 0; n < 10000; ++n) {
+        ++hist[RandomBetweenU(-5, 5)];
+    }
+    
+    cout << "mt19937 uniform distribution:\n";
+    PrintDistribution(hist);
+    
+    hist.clear();
+    
     for (int n = 0; n < 10000; ++n) {
         ++hist[RandomBetweenN(-5, 5)];
     }
     
+    cout << "mt19937 normal distribution:\n";
     PrintDistribution(hist);
     
+    cout << std::endl;
     
+    hist.clear();
+    
+    return 0;
     
 }
