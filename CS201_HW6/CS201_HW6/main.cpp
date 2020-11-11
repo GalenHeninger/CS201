@@ -38,7 +38,12 @@ int RandomBetween(int first, int last) {
     return rand() % (last - first + 1) + first;
 }
 
-
+void PrintDistribution(const std::map<int, int> &numbers) {
+    for (auto p : numbers) {
+        std::cout << std::fixed << std::setprecision(1) << std::setw(2)
+                  << p.first << ' ' << std::string(p.second/200, '*') << '\n';
+    }
+}
  
 int main()
 {
@@ -50,9 +55,6 @@ int main()
     }
     
     PrintDistribution(hist);
-    
-    // std::cout << "Normal distribution around " << mean << ":\n";
-    
     
     
 }
