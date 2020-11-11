@@ -20,8 +20,7 @@ std::mt19937 generator(device());
 
 int RandomBetweenU(int first, int last) {
     
-    int mean = (first + last)/2;
-    std::uniform_int_distribution<int> distribution(mean, 2);
+    std::uniform_int_distribution<int> distribution(first, last);
     
     return distribution(generator);
 }
@@ -29,7 +28,8 @@ int RandomBetweenU(int first, int last) {
 int RandomBetweenN(int first, int last) {
     
     int mean = (first + last)/2;
-    std::normal_distribution<> normal_distribution(mean, 2);
+    int difference = last - first;
+    std::normal_distribution<> normal_distribution(mean, 0.15*difference);
     
     return normal_distribution(generator);
 }
@@ -55,6 +55,7 @@ int main()
     }
     
     PrintDistribution(hist);
+    
     
     
 }
