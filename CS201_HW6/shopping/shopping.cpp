@@ -46,11 +46,26 @@ int main() {
             auto iter = items.find(str_in);
             
             if(iter != items.end()) {
+                cout << "Enter a quantity." << endl;
                 iter -> second.units ++;
                 cout << str_in << " added." << endl;
             } else
                 cout << "No such item." << endl;
-        }
+        } else if (str_in == "Remove")
+        {
+            
+            cout << "Enter an item name." << endl;
+            getline(cin, str_in);
+            
+            auto iter = items.find(str_in);
+            
+            if(iter != items.end() && iter -> second.units > 0) {
+                iter -> second.units --;
+                cout << str_in << " removed." << endl;
+            } else
+                cout << "No such item to remove." << endl;
+        } 
+        
     }
     
     return 0;
