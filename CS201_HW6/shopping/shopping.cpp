@@ -82,6 +82,8 @@ int main() {
                 if (p.second.units > 0)
                     cout << p.second.units << "    " << p.first <<  endl;
             
+        } else if (str_in == "Confirm") {
+            break;
         }
             
     }
