@@ -9,6 +9,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <numeric>
 
 using std::string;
 using std::map;
@@ -32,11 +33,12 @@ int main() {
         {"Milk",{3.29, 0}}
     };
     
-    cout << "There are 0 items in the cart. Type 'Add' 'Remove' 'Total' 'View items' or 'Confirm'" << endl;
+    cout << "There are 0 items in the cart. Type 'Add' 'Remove' 'View items' or 'Confirm'" << endl;
     string str_in;
-    getline(cin, str_in);
     
     while(true) {
+        
+        getline(cin, str_in);
         
         if (str_in == "Add") {
 
@@ -46,7 +48,6 @@ int main() {
             auto iter = items.find(str_in);
             
             if(iter != items.end()) {
-                cout << "Enter a quantity." << endl;
                 iter -> second.units ++;
                 cout << str_in << " added." << endl;
             } else
@@ -64,8 +65,25 @@ int main() {
                 cout << str_in << " removed." << endl;
             } else
                 cout << "No such item to remove." << endl;
-        } 
-        
+        } else if (str_in == "Total") {
+            
+//            auto accumulate_func = [](int accumulator, const record &rec) {
+//                return accumulator + rec.unit_price*rec.units;
+//             };
+//
+//            double total = std::accumulate(items.begin(), items.end(), 0, accumulate_func);
+//
+//            cout << "Total: " << total << endl;
+            
+        } else if (str_in == "View items") {
+            
+            cout << "These are the current items." << endl;
+            for (auto p:items)
+                if (p.second.units > 0)
+                    cout << p.second.units << "    " << p.first <<  endl;
+            
+        }
+            
     }
     
     return 0;
