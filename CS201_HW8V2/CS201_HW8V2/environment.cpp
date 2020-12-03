@@ -16,6 +16,9 @@ void Environment::setTemperature(double new_temp) {
 double Environment::getTemperature() {
     return _temperature;
 }
+bool Environment::getHeaterStatus() {
+    return _heater_is_on;
+}
 void Environment::toggleHeater() {
     _heater_is_on = !_heater_is_on;
 }

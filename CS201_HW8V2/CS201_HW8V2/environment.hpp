@@ -17,6 +17,7 @@ public:
     void setTemperature(double new_temp);
     double getTemperature();
     void toggleHeater();
+    bool getHeaterStatus();
     void iterate();
 private:
     double _temperature = 20.;
