@@ -9,6 +9,20 @@
 #ifndef environment_hpp
 #define environment_hpp
 
-#include <stdio.h>
+#include "agent.hpp"
+#include "simulator.hpp"
+
+class Environment {
+public:
+    void setTemperature(double new_temp) {
+        _temperature = new_temp;
+    }
+    double getTemperature() {
+        return _temperature;
+    }
+private:
+    double _temperature = 0;
+};
 
 #endif /* environment_hpp */
+

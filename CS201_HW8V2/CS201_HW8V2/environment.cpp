@@ -6,8 +6,10 @@
 //  Copyright © 2020 Galen. All rights reserved.
 //
 
+#include "agent.hpp"
 #include "environment.hpp"
+#include "simulator.hpp"
 
-class Environment {
+double Environment::getTemperature() {
     
-};
+}
