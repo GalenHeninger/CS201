@@ -7,7 +7,17 @@
 //
 
 #include "agent.hpp"
+#include "environment.hpp"
+#include "simulator.hpp"
 
-class Agent {
-    
-};
+void Agent::perceive(Environment Env) {
+    _measured_temperature = Env.getTemperature();
+}
+
+void Agent::think() {
+    //_measured_temperature;
+}
+
+void Agent::act(Environment Env) {
+    //Env.toggleHeater();
+}

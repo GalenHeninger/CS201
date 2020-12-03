@@ -9,6 +9,16 @@
 #ifndef agent_hpp
 #define agent_hpp
 
-#include <stdio.h>
+#include "environment.hpp"
+#include "simulator.hpp"
+
+class Agent {
+public:
+    void perceive(Environment Env);
+    void think();
+    void act(Environment Env);
+private:
+    double _measured_temperature;
+};
 
 #endif /* agent_hpp */
