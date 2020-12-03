@@ -10,4 +10,19 @@
 #include "environment.hpp"
 #include "simulator.hpp"
 
-
+void Environment::setTemperature(double new_temp) {
+    _temperature = new_temp;
+}
+double Environment::getTemperature() {
+    return _temperature;
+}
+void Environment::toggleHeater() {
+    _heater_is_on = !_heater_is_on;
+}
+void Environment::iterate() {
+    if(_heater_is_on)
+        _temperature++;
+    else {
+        _temperature--;
+    }
+}

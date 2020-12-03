@@ -14,22 +14,10 @@
 
 class Environment {
 public:
-    void setTemperature(double new_temp) {
-        _temperature = new_temp;
-    }
-    double getTemperature() {
-        return _temperature;
-    }
-    void toggleHeater() {
-        _heater_is_on = !_heater_is_on;
-    }
-    void iterate() {
-        if(_heater_is_on)
-            _temperature++;
-        else {
-            _temperature--;
-        }
-    }
+    void setTemperature(double new_temp);
+    double getTemperature();
+    void toggleHeater();
+    void iterate();
 private:
     double _temperature = 20.;
     bool _heater_is_on = false;
