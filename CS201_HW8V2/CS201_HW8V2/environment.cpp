@@ -10,6 +10,4 @@
 #include "environment.hpp"
 #include "simulator.hpp"
 
-double Environment::getTemperature() {
-    
-}
+

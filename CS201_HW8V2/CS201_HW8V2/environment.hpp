@@ -20,8 +20,19 @@ public:
     double getTemperature() {
         return _temperature;
     }
+    void toggleHeater() {
+        _heater_is_on = !_heater_is_on;
+    }
+    void iterate() {
+        if(_heater_is_on)
+            _temperature++;
+        else {
+            _temperature--;
+        }
+    }
 private:
-    double _temperature = 0;
+    double _temperature = 20.;
+    bool _heater_is_on = false;
 };
 
 #endif /* environment_hpp */
