@@ -19,6 +19,9 @@ public:
     void act(Environment Env);
 private:
     double _measured_temperature;
+    double _target_temperature;
+    bool _known_heater_status;
+    bool _should_toggle_heater;
 };
 
 #endif /* agent_hpp */
