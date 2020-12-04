@@ -9,6 +9,12 @@
 #ifndef simulator_hpp
 #define simulator_hpp
 
-#include <stdio.h>
+#include "agent.hpp"
+
+class Simulator {
+public:
+    void askOwner();
+    void run();
+};
 
 #endif /* simulator_hpp */
