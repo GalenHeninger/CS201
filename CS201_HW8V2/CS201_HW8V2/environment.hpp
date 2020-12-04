@@ -13,7 +13,6 @@
 
 class Environment {
 public:
-    void setTemperature(double new_temp);
     double getTemperature();
     void toggleHeater();
     bool getHeaterStatus();

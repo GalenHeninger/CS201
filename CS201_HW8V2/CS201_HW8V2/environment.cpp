@@ -10,9 +10,6 @@
 #include "environment.hpp"
 #include "simulator.hpp"
 
-void Environment::setTemperature(double new_temp) {
-    _temperature = new_temp;
-}
 double Environment::getTemperature() {
     return _temperature;
 }

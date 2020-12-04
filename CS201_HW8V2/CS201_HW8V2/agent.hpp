@@ -15,7 +15,7 @@ class Agent {
 public:
     void perceive(Environment Env);
     void think();
-    void act(Environment Env);
+    void act(Environment &Env);
     void setTargetTemperature(double temp);
 private:
     double _measured_temperature;

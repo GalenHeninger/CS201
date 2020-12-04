@@ -10,7 +10,7 @@
 
 #include "simulator.hpp"
 
-int main(int argc, const char * argv[]) {
+int main() {
     Simulator simulator;
     simulator.run();
 }

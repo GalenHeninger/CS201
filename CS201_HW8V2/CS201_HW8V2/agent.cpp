@@ -17,13 +17,12 @@ void Agent::perceive(Environment Env) {
 void Agent::think() {
     // The heater should be off if the target temperature is less than the
     // measured temperature.
-    if(_target_temperature <= _measured_temperature == _known_heater_status) {
-        _should_toggle_heater = true;
-    }
+    _should_toggle_heater = _target_temperature < _measured_temperature == _known_heater_status;
 }
 
-void Agent::act(Environment Env) {
-    if(_should_toggle_heater) Env.toggleHeater();
+void Agent::act(Environment &Env) {
+    if(_should_toggle_heater)
+        Env.toggleHeater();
 }
 
 void Agent::setTargetTemperature(double temp) {
