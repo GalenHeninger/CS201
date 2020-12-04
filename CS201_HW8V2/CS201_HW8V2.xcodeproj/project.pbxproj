@@ -70,9 +70,9 @@
 				F8893C672578881C00E06D9C /* agent.cpp */,
 				F8893C682578881C00E06D9C /* agent.hpp */,
 				F8893C6A2578882700E06D9C /* environment.cpp */,
+				F8893C6B2578882700E06D9C /* environment.hpp */,
 				F8893C6D2578883900E06D9C /* simulator.cpp */,
 				F8893C6E2578883900E06D9C /* simulator.hpp */,
-				F8893C6B2578882700E06D9C /* environment.hpp */,
 			);
 			path = CS201_HW8V2;
 			sourceTree = "<group>";

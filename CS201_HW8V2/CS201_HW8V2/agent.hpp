@@ -10,13 +10,13 @@
 #define agent_hpp
 
 #include "environment.hpp"
-#include "simulator.hpp"
 
 class Agent {
 public:
     void perceive(Environment Env);
     void think();
     void act(Environment Env);
+    void setTargetTemperature(double temp);
 private:
     double _measured_temperature;
     double _target_temperature;

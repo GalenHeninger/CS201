@@ -8,10 +8,9 @@
 
 #include <iostream>
 
-#include "agent.hpp"
 #include "simulator.hpp"
-#include "environment.hpp"
 
 int main(int argc, const char * argv[]) {
-    
+    Simulator simulator;
+    simulator.run();
 }

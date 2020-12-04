@@ -10,7 +10,6 @@
 #define environment_hpp
 
 #include "agent.hpp"
-#include "simulator.hpp"
 
 class Environment {
 public:

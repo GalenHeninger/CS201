@@ -20,17 +20,26 @@ void Simulator::askOwner() {
     std::cout << "Enter a target temperature:" << std::endl;
     std::cin >> temp_in;
     agent.setTargetTemperature(temp_in);
+    std::cout << "Target temperature: " << temp_in << std::endl;
 }
 
 void Simulator::run() {
     
-    while(true) {
-        for(int i = 0; i < 10; i++)
+    for(int j = 0; j < 10; j++) {
+        
+        askOwner();
+        
+        for(int i = 0; i < 10; i++) {
+            
             environment.iterate();
+            std::cout << "Heater on? " << environment.getHeaterStatus() << std::endl;
+            std::cout << "Current temperature: " << environment.getTemperature() << std::endl;
+            
             agent.perceive(environment);
             agent.think();
             agent.act(environment);
-        askOwner();
+        }
+        
     }
     
 }
