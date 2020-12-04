@@ -26,3 +26,7 @@ void Agent::think() {
 void Agent::act(Environment Env) {
     if(_should_toggle_heater) Env.toggleHeater();
 }
+
+void Agent::setTargetTemperature(double temp) {
+    _target_temperature = temp;
+}
